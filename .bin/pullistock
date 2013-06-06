@@ -1,2 +1,0 @@
-#!/bin/bash
-rsync -avPe ssh dev-kwerklund.istockphoto.com:/data/branches/ ~/dev/istock/data/branches
