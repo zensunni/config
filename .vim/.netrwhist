@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/kwerklund/dev/nice_bank/lib'
+let g:netrw_dirhist_2='/Users/kwerklund/dev'
+let g:netrw_dirhist_3='/Users/kwerklund/dev/ruby/blogger/app/views/about'
+let g:netrw_dirhist_4='/Users/kwerklund/dev/testing/rspec/codebreaker/lib/codebreaker'
+let g:netrw_dirhist_5='/Users/kwerklund/dev/testing/rspec/codebreaker/bin'
+let g:netrw_dirhist_6='/Users/kwerklund/dev/ESP/scripts/bin'

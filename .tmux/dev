@@ -1,0 +1,10 @@
+#session options:
+#new  -s SessionName -n WindowName Command
+#neww -n foo/bar foo
+#splitw -v -p 50 -t 0 bar
+#selectw -t 1 
+#selectp -t 0
+
+splitw -h -p 40 # split current pane
+select-pane -L
+

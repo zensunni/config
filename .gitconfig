@@ -1,0 +1,17 @@
+[user]
+	name = Kirk Werklund
+	email = kirk.werklund@gettyimages.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = matching
+[branch]
+	autosetuprebase = always
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+[http]
+	sslverify = false

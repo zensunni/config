@@ -1,0 +1,1000 @@
+ 1165  grep "setStyle" ./*.js
+ 1166  grep "setStyle" ./*.js | less
+ 1167  ls
+ 1168  cd search/
+ 1169  ls
+ 1170  cd ..
+ 1171  ls
+ 1172  cd search/
+ 1173  ls
+ 1174  cd ..
+ 1175  ls
+ 1176  grep "" ./*.js | less
+ 1177  cd search/
+ 1178  ls
+ 1179  grep "" ./*.js | less
+ 1180  ls
+ 1181  cd ..
+ 1182  ls
+ 1183  vim search/loupe.js 
+ 1184  ls
+ 1185  cd ..
+ 1186  ls
+ 1187  cd js/
+ 1188  ls
+ 1189  vim js.php 
+ 1190  ls
+ 1191  cd ~/dev
+ 1192  ls
+ 1193  ack
+ 1194  ack --help
+ 1195  ack --help | less
+ 1196  man ack | less
+ 1197  ls
+ 1198  cd -
+ 1199  ls
+ 1200  ack Respond_to
+ 1201  ack progress
+ 1202  ack progress | less
+ 1203  vim ~/.ackrc
+ 1204  ack progress | less
+ 1205  ack progress
+ 1206  vim ~/.ackrc
+ 1207  ack progress
+ 1208  ack -o progress
+ 1209  ack -l progress
+ 1210  ls
+ 1211  ack -l progress
+ 1212  ack -c progress
+ 1213  ack --color progress
+ 1214  ack -o progress
+ 1215  ack -o '.{0,24}progress.{0,24}'
+ 1216  ack -o '.{0,24}progress.{0,50}'
+ 1217  ack --version
+ 1218  VBoxManage startvm istock
+ 1219  vim /etc/init.d/mystartup.sh
+ 1220  VBoxManage startvm dev-kwerklund
+ 1221  vim /etc/hosts
+ 1222  cd ~/
+ 1223  sudo sed -i.bak s/^\n*.*.dev-kwerklund.istockimg.com/$eth0 \4dev-kwerklund.istockimg.com/g
+ 1224  sudo sed -i.bak s/^\n*.*.dev-kwerklund\.istockimg\.com/$eth0 \4dev-kwerklund.istockimg.com/g
+ 1225  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/$eth0 \4dev-kwerklund.istockimg.com/g
+ 1226  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/$eth0 \4dev-kwerklund\.istockimg\.com/g
+ 1227  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/testdev-kwerklund\.istockimg\.com/g
+ 1228  cp /etc/hosts .
+ 1229  ls
+ 1230  vim hosts
+ 1231  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/testdev-kwerklund\.istockimg\.com/g
+ 1232  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test \4dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1233  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test-dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1234  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test \4dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1235  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test\s4dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1236  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test\sdev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1237  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/test\ \ \ \ dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1238  sudo sed -i.bak s/^\n{1,3}\.\n{1,3}\.\n{1,3}.\n{1,3}\ {4}dev-kwerklund/$neweth0\ {4}dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1239  sudo sed -i.bak s/^\n{1,3}\.\n{1,3}\.\n{1,3}.\n{1,3}\ {4}dev-kwerklund/$neweth0\ \ dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1240  sudo sed -i.bak s/^\n{1,3}\.\n{1,3}\.\n{1,3}.\n{1,3}\s{4}dev-kwerklund/$neweth0\ \ dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1241  sudo sed -i.bak s/^\n{1,3}\.\n{1,3}\.\n{1,3}.\n{1,3}\s{4}dev-kwerklund/$neweth0dev-kwerklund/g /etc/hosts
+ 1242  sudo sed -i.bak s/^\n+\.\n+\.\n+.\n+\s+{4}dev-kwerklund/$neweth0\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1243  sudo sed -i.bak s/^\n+\.\n+\.\n+.\n+\s+{4}dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1244  sudo sed -i.bak s/^\n+\.\n+\.\n+.\n+\s+dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1245  sudo sed -i.bak s/^\n+\.\n+\.\n+.\n+\ +dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1246  sudo sed -i.bak s/^\n+\.\n+\.\n+.\n+\ \ \ \ dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1247  sudo sed -i.bak s/^\n+\.\n+\.\n+\.\n+\ \ \ \ dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1248  sudo sed -i.bak s/^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\ \ \ \ dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1249  sudo sed -i.bak s/^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/test/g /etc/hosts
+ 1250  sudo sed -i.bak s/^[0-9]/test/g /etc/hosts
+ 1251  sudo sed -i.bak s/^[0-9]+\./test/g /etc/hosts
+ 1252  sudo sed -i.bak s/^\d+\d+\\.\d+\.\d+\ \ \ \ dev-kwerklund/test\ \ \ \ dev-kwerklund/g /etc/hosts
+ 1253  sudo sed -i.bak s/^\d{1,3}\.\d{1,3}\.\d{1,3}.\d{1,3}\s{4}dev-kwerklund/$neweth0dev-kwerklund/g /etc/hosts
+ 1254  sudo sed -i.bak "s/^\d{1,3}\.\d{1,3}\.\d{1,3}.\d{1,3}\s{4}dev-kwerklund/$neweth0dev-kwerklund/g" /etc/hosts
+ 1255  sudo sed -i.bak "s/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s{4}dev-kwerklund/$neweth0dev-kwerklund/g" /etc/hosts
+ 1256  sudo sed -i.bak "s/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/IPADDRESS/g" /etc/hosts
+ 1257  sudo sed -i "s/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/IPADDRESS/g" /etc/hosts
+ 1258  sudo sed -i.bak "s/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/IPADDRESS/g" /etc/hosts
+ 1259  sudo sed -i.bak "s/^\d{1,3}/IPADDRESS/g" /etc/hosts
+ 1260  sudo sed -i.bak "s/^\d{1,2}/IPADDRESS/g" /etc/hosts
+ 1261  sudo sed -i.bak "s/^\d{1-2}/IPADDRESS/g" /etc/hosts
+ 1262  sudo sed -i.bak "s/^\d{1}/IPADDRESS/g" /etc/hosts
+ 1263  sudo sed -i.bak "s/^\n{1}/IPADDRESS/g" /etc/hosts
+ 1264  sudo sed -i.bak "s/^\d/IPADDRESS/g" /etc/hosts
+ 1265  sudo sed -i.bak "s/^\n/IPADDRESS/g" /etc/hosts
+ 1266  sudo sed -i.bak "s/^10/IPADDRESS/g" /etc/hosts
+ 1267  man cut
+ 1268  sudo sed -i.bak "s/^\d/IPADDRESS/g" /etc/hosts
+ 1269  sudo sed -i.bak "s/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\s{4}dev-kwerklund/$neweth0dev-kwerklund/g" /etc/hosts
+ 1270  sudo sed -i.bak "s/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}/$neweth0dev-kwerklund/g" /etc/hosts
+ 1271  sudo sed -i.bak "s/^[0-9]{1,3}/$neweth0dev-kwerklund/g" /etc/hosts
+ 1272  sudo sed -i.bak "s/^[0-9]\{1,3}/$neweth0dev-kwerklund/g" /etc/hosts
+ 1273  sudo sed -i.bak "s/^[0-9]{1,3}\./$neweth0dev-kwerklund/g" /etc/hosts
+ 1274  sudo sed -i.bak "s/^[0-9]/$neweth0dev-kwerklund/g" /etc/hosts
+ 1275  sudo sed -i.bak "s/^[0-9]\{1,3\}\./ETH0\ \ \ \ dev-kwerklund/g" /etc/hosts
+ 1276  sudo sed -i.bak "s/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\s\{4\}dev-kwerklund/ETH0\ \ \ \ dev-kwerklund/g" /etc/hosts
+ 1277  sudo sed -i.bak "s/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}/ETH0\ \ \ \ dev-kwerklund/g" /etc/hosts
+ 1278  sudo sed -i.bak "s/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\ \{4\}dev-kwerklund/ETH0\ \ \ \ dev-kwerklund/g" /etc/hosts
+ 1279  sudo sed -i.bak s/^\n*.*dev-kwerklund\.istockimg\.com/ETH0\ \ \ \ dev-kwerklund\.istockimg\.com/g /etc/hosts
+ 1280  sudo sed -i.bak "s/^[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\ \{4\}dev-kwerklund/ETH0\ \ \ \ dev-kwerklund/g" /etc/hosts
+ 1281  ssh dev-kwerklund.istockphoto.com
+ 1282  VBoxManage guestproperty get "dev-kwerklund" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1283  VBoxManage guestproperty enumerate "dev-kwerklund"
+ 1284  VBoxManage guestproperty enumerate "dev-kwerklund" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1285  VBoxManage guestproperty enumerate "dev-kwerklund"
+ 1286  VBoxManage guestproperty get "dev-kwerklund" "/VirtualBox/GuestInfo/OS/Product"
+ 1287  VBoxManage guestproperty enumerate "dev-kwerklund"
+ 1288  VBoxManage guestproperty enumerate "dev-kwerklund" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1289  VBoxManage guestproperty get "dev-kwerklund" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1290  VBoxManage guestproperty enumerate "dev-kwerklund"
+ 1291  VBoxManage guestproperty enumerate dev-kwerklund
+ 1292  VBoxManage guestproperty get "dev-kwerklund" "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1293  VBoxManage guestproperty get "dev-kwerklund" "/VirtualBox/HostInfo/VBoxVerExt"
+ 1294  sudo apt-get upgrade
+ 1295  ls ~/.bin
+ 1296  updateipistock 
+ 1297  ssh dev-kwerklund.istockphoto.com
+ 1298  ls
+ 1299  cd ~/dev/istock/
+ 1300  ls
+ 1301  cd virtualmachines/
+ 1302  ls
+ 1303  cd ..
+ 1304  ls
+ 1305  cd ..
+ 1306  ls
+ 1307  cd ..
+ 1308  cd VirtualBox\ VMs/
+ 1309  ls
+ 1310  cd vmtemplates/
+ 1311  ls
+ 1312  cd ..
+ 1313  cd dev-kwerklund
+ 1314  ls
+ 1315  cd ..
+ 1316  ls
+ 1317  cd dev-kwerklund-template/
+ 1318  ls
+ 1319  ls -la
+ 1320  ls
+ 1321  cd ..
+ 1322  cp dev-kwerklund-template/ dev-kwerklund-template-backup
+ 1323  sudo cp -R dev-kwerklund-template/ dev-kwerklund-template-backup
+ 1324  ls
+ 1325  cd dev-kwerklund-template-backup/
+ 1326  ls
+ 1327  cd ..
+ 1328  ls
+ 1329  cd dev-kwerklund-template
+ 1330  ls
+ 1331  VBoxManage modifyhd dev-TEMPLATE.vmdk --resize 40960
+ 1332  VBoxManage modifyhd dev-TEMPLATE-flat.vmdk --resize 40960
+ 1333  ssh dev-kwerklund.istockphoto.com
+ 1334  exit
+ 1335  cd ~/dev/
+ 1336  ls
+ 1337  cd istock/
+ 1338  ls
+ 1339  cd data/
+ 1340  ls
+ 1341  cd branches/
+ 1342  ls
+ 1343  cd ..
+ 1344  rm -rf branches/*
+ 1345  pullistock 
+ 1346  pushistock 
+ 1347  rsync -avPe ssh ~/.vim/ dev-kwerklund.istockphoto.com:~/.vim
+ 1348  exit
+ 1349  ls
+ 1350  cd Downloads/
+ 1351  ls
+ 1352  ls *.pdf
+ 1353  ls *.doc
+ 1354  ls
+ 1355  ls *.pdf
+ 1356  ls
+ 1357  ls *.pdf
+ 1358  ls
+ 1359  open Fierce\ Challenge\ -\ Possibilities.pdf 
+ 1360  ssh dev-kwerklund.istockphoto.com
+ 1361  sudo vim /etc/hosts
+ 1362  ssh dev-kwerklund.istockphoto.com
+ 1363  vim ~/dev/notes/virtualboxnotes.txt 
+ 1364  VBoxManage controlvm "istock" poweroff
+ 1365  vim ~/dev/notes/virtualboxnotes.txt 
+ 1366  VBoxManage controlvm "istock" poweroff
+ 1367  VBoxManage controlvm "dev-kwerklund" poweroff
+ 1368  VBoxManage
+ 1369  VBoxManage | less
+ 1370  VBoxManage startvm "dev-kwerklund"
+ 1371  vim ~/dev/notes/istock_env_notes.txt 
+ 1372  vim ~/dev/notes/linuxnotes.txt 
+ 1373  ssh dev-kwerklund.istockphoto.com
+ 1374  vim /etc/hosts
+ 1375  sudo vim /etc/hosts
+ 1376  ssh dev-kwerklund.istockphoto.com
+ 1377  ls
+ 1378  cd ~/dev/istock/data/branches/US45498/US47576/ZF/
+ 1379  vim
+ 1380  ssh dev-kwerklund.istockphoto.com
+ 1381  VBoxManage guestproperty enumerate dev-kwerklund
+ 1382  ls
+ 1383  cd ~/
+ 1384  ls
+ 1385  ls ~/.bin/
+ 1386  pullistock 
+ 1387  ssh root@dev-kwerklund.istockphoto.com
+ 1388  VBoxManage guestproperty enumerate dev-kwerklund
+ 1389  vim ~/dev/notes/linuxnotes.txt 
+ 1390  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/1/V4/IP"
+ 1391  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/2/V4/IP"
+ 1392  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1393  man grep |less
+ 1394  ifconfig
+ 1395  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1396  VBoxManage guestproperty enumerate dev-kwerklund
+ 1397  VBoxManage guestproperty enumerate dev-kwerklund | awk IP
+ 1398  VBoxManage guestproperty enumerate dev-kwerklund | ack IP
+ 1399  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk {print $1} 
+ 1400  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk '{print $1}' 
+ 1401  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk '{print $2}' 
+ 1402  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk '{print $3}' 
+ 1403  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk '{print $4}' 
+ 1404  VBoxManage guestproperty enumerate dev-kwerklund | ack IP | awk '{print $0}' 
+ 1405  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/0/V4/IP"
+ 1406  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/0/V4/IP" | awk '{print $2}'
+ 1407  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/1/V4/IP" | awk '{print $2}'
+ 1408  VBoxManage guestproperty get dev-kwerklund "/VirtualBox/GuestInfo/Net/1/V4/IPbla"
+ 1409  man read
+ 1410  read --help
+ 1411  man read prompt
+ 1412  vim ~/dev/notes/esp_env_notes.txt 
+ 1413  test
+ 1414  pushistock 
+ 1415  vim
+ 1416  ls
+ 1417  cd ~/dev/istock/data/branches/US45498/
+ 1418  ls
+ 1419  cd main
+ 1420  ls
+ 1421  vim
+ 1422  ls
+ 1423  ssh dev-kwerklund.istockphoto.com
+ 1424  exit
+ 1425  t -v
+ 1426  t --version
+ 1427  kjasdf --version
+ 1428  source ~/.bashrc 
+ 1429  exit
+ 1430  cd ~/
+ 1431  cd dev/
+ 1432  vim notes/istock_env_notes.txt 
+ 1433  vim ~/.vimrc 
+ 1434  rsync ~/.vim/vimrc dev-kwerklund@istockphoto.com:~/.vim/vimrc
+ 1435  rsync ~/.vim/vimrc dev-kwerklund.istockphoto.com:~/.vim/vimrc
+ 1436  vim notes/istock_env_notes.txt 
+ 1437  cd ../.vim/bundle/
+ 1438  ls
+ 1439  git clone https://github.com/mileszs/ack.vim.git
+ 1440  ls
+ 1441  cd ack.vim/
+ 1442  ls
+ 1443  ls ../nerdcommenter/
+ 1444  cd ..
+ 1445  ls
+ 1446  vim
+ 1447  rsync -ae ssh ~/.vim/bundle/ dev-kwerklund.istockphoto.com:~/.vim/bundle
+ 1448  rsync -ae ssh ~/.vim/ dev-kwerklund.istockphoto.com:~/.vim
+ 1449  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1450  vim ~/.bashrc
+ 1451  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1452  vim ~/.bashrc
+ 1453  source ~/.bashrc
+ 1454  vim ~/.bashrc
+ 1455  source ~/.bashrc
+ 1456  sudo apt-get install t
+ 1457  ls
+ 1458  ls ~/.tasks
+ 1459  ls ~/tasks
+ 1460  ls ~/
+ 1461  ls ~/.
+ 1462  ls ~/.*
+ 1463  vim ~/.bashrc
+ 1464  source ~/.bashrc
+ 1465  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1466  ls
+ 1467  vim ~/.bashrc
+ 1468  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1469  source ~/.bashrc
+ 1470  vim ~/.bashrc
+ 1471  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1472  source ~/.bashrc
+ 1473  cd /data
+ 1474  ls
+ 1475  cd ..
+ 1476  cd ~/
+ 1477  lsb_release -a
+ 1478  vim ~/.bashrc
+ 1479  source ~/.bashrc
+ 1480  vim ~/.bashrc
+ 1481  source ~/.bashrc
+ 1482  rsync -ae ssh ~/.bashrc dev-kwerklund.istockphoto.com:~/.bashrc
+ 1483  exit
+ 1484  tmux new -s dev
+ 1485  exit
+ 1486  ls
+ 1487  exi
+ 1488  exit
+ 1489  vim
+ 1490  vim --version
+ 1491  vim
+ 1492  cd dev/
+ 1493  ls
+ 1494  cd vim_source/
+ 1495  ls
+ 1496  vim ~/history
+ 1497  vim ~/.bash_history 
+ 1498  vim ~/.bash_history | ack configure
+ 1499  j
+ 1500  LL
+ 1501  kjjkj
+ 1502  source ~/.bashrc
+ 1503  H
+ 1504  exit
+ 1505  cat ~/.bash_history | ack configure
+ 1506  ./configure --enable-rubyinterp
+ 1507  vim ~/dev/notes/vimnotes.txt 
+ 1508  unset LANG
+ 1509  vim ~/dev/notes/vimnotes.txt 
+ 1510  ls ~/.vim/bundle/
+ 1511  cd ~/.vim/bundle/
+ 1512  ls
+ 1513  git clone https://github.com/wincent/Command-T.git
+ 1514  ls
+ 1515  vim
+ 1516  vim --version
+ 1517  ls
+ 1518  vim --version
+ 1519  source ~/.bashrc
+ 1520  vim
+ 1521  cd ~/.vim/ruby/command-t
+ 1522  cd ~/.vim/bundle/command-t/ruby/command-t
+ 1523  ruby extconf.rb
+ 1524  make
+ 1525  ack
+ 1526  ls
+ 1527  ack test
+ 1528  vim ~/.ackrc
+ 1529  ls
+ 1530  cd ~/dev/istock/
+ 1531  ls
+ 1532  cd data/
+ 1533  ls
+ 1534  cd branches/
+ 1535  ls
+ 1536  cd US45498/
+ 1537  ls
+ 1538  ack console.log
+ 1539  ls
+ 1540  cd main/
+ 1541  ls
+ 1542  cd ZF/
+ 1543  ls
+ 1544  cd public/
+ 1545  ls
+ 1546  ack test
+ 1547  ssh dev-kwerklund.istockphoto.com
+ 1548  ls
+ 1549  cd ~/
+ 1550  vim dev/notes/vimnotes.txt 
+ 1551  exit
+ 1552  vim ~/dev/notes/vimnotes.txt 
+ 1553  ls ~/dev/notes/
+ 1554  ls
+ 1555  ./configure --help
+ 1556  ./configure --help|less
+ 1557  ./configure --help|ack OS
+ 1558  ./configure --disable-darwin --enable-rubyinterp --enable-pythoninterp --with-features=huge
+ 1559  make
+ 1560  ls
+ 1561  cd libs/
+ 1562  ls
+ 1563  cd arp.library 
+ 1564  cd ..
+ 1565  cd src
+ 1566  ls
+ 1567  ./vim
+ 1568  sudo make install
+ 1569  cd ../..
+ 1570  ls
+ 1571  vim
+ 1572  cd vim_source/
+ 1573  sudo make install
+ 1574  vim
+ 1575  ./configure --disable-darwin --enable-rubyinterp --enable-pythoninterp --with-features=huge
+ 1576  make
+ 1577  make install
+ 1578  sudo make install
+ 1579  vim
+ 1580  ./configure --disable-darwin --enable-rubyinterp --with-features=huge
+ 1581  make
+ 1582  ls
+ 1583  make
+ 1584  ./configure --disable-darwin --enable-rubyinterp --with-features=huge
+ 1585  make
+ 1586  sudo make install
+ 1587  vim
+ 1588  ./configure --disable-darwin --enable-rubyinterp
+ 1589  make
+ 1590  sudo make install
+ 1591  sudo port install dsh destroot.env LANG=C
+ 1592  vim ~/dev/notes/mac_drawbacks.txt
+ 1593  unset LANG
+ 1594  ./configure --disable-darwin --enable-rubyinterp --enable-pythoninterp --with-features=huge
+ 1595  make
+ 1596  sudo make install
+ 1597  vim
+ 1598  sudo make install | ack error
+ 1599  sudo make install
+ 1600  ls
+ 1601  cd ..
+ 1602  vim
+ 1603  cd vim_source/
+ 1604  ls
+ 1605  ./configure --disable-darwin --enable-rubyinterp 
+ 1606  make
+ 1607  sudo make install
+ 1608  ls
+ 1609  cd ..
+ 1610  vim
+ 1611  cd vim_source/
+ 1612  ls
+ 1613  cd src
+ 1614  ls
+ 1615  ./vim
+ 1616  cd ..
+ 1617  ls
+ 1618  ./configure --disable-darwin --enable-rubyinterp --enable-pythoninterp --with-features=huge --prefix=/us/local
+ 1619  make
+ 1620  sudo make install
+ 1621  vim
+ 1622  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/local
+ 1623  vim make
+ 1624  make
+ 1625  sudo make install
+ 1626  vim
+ 1627  vim which
+ 1628  which vim
+ 1629  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/bin/
+ 1630  make
+ 1631  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/bin/
+ 1632  make
+ 1633  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/bin
+ 1634  make
+ 1635  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/local/
+ 1636  make
+ 1637  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/bin/
+ 1638  make
+ 1639  sudo make install
+ 1640  vim
+ 1641  vim -version
+ 1642  vim --version
+ 1643  which vim
+ 1644  ./configure --disable-darwin --enable-rubyinterp --prefix=/usr/local/
+ 1645  make
+ 1646  sudo make install
+ 1647  which vim
+ 1648  ls
+ 1649  cd vim
+ 1650  vim vim
+ 1651  ls
+ 1652  mv /usr/bin/vim .
+ 1653  sudo mv /usr/bin/vim .
+ 1654  ls
+ 1655  cd ..
+ 1656  vim
+ 1657  cd vim_source/
+ 1658  sudo mv vim /usr/bin/
+ 1659  vim
+ 1660  brew
+ 1661  brew install vim
+ 1662  vim --version
+ 1663  brew install vim
+ 1664  vim
+ 1665  brew install vim
+ 1666  ls /usr/local/bin/
+ 1667  /usr/local/bin/vim
+ 1668  ls
+ 1669  vim ~/.bashrc 
+ 1670  source ~/.bashrc
+ 1671  ls
+ 1672  ./configure --disable-darwin --enable-rubyinterp --enable-pythoninterp --with-features=huge
+ 1673  make
+ 1674  sudo make install
+ 1675  which vim
+ 1676  vim
+ 1677  vim --version
+ 1678  which vim
+ 1679  /usr/bin/vim
+ 1680  /usr/bin/vim --version
+ 1681  vim
+ 1682  ssh dev-kwerklund.istockphoto.com
+ 1683  updateipistock 
+ 1684  ssh dev-kwerklund.istockphoto.com
+ 1685  exit
+ 1686  vim ~/dev/notes/istock_env_notes.txt 
+ 1687  ssh dev-kwerklund.istockphoto.com
+ 1688  exit
+ 1689  tmux new -s dev
+ 1690  exit
+ 1691  ls
+ 1692  test
+ 1693  ls
+ 1694  grep 192 hosts
+ 1695  grep 192.hosts
+ 1696  testing
+ 1697  grep 19
+ 1698  source ./.bashrc 
+ 1699  source .bashrc
+ 1700  source .bashrc    
+ 1701  akc-grep
+ 1702  source .bashrc 
+ 1703  ping thehiddengrotto.com
+ 1704  $(tput setaf 11)test
+ 1705  echo $(tput setaf 11)test
+ 1706  echo $(tput setaf 11)test$(tput setaf 7)
+ 1707  echo $(tput setaf 12)test$(tput setaf 7)
+ 1708  echo $(tput setaf 13)test$(tput setaf 7)
+ 1709  echo $(tput setaf 14)test$(tput setaf 7)
+ 1710  echo $(tput setaf 15)test$(tput setaf 7)
+ 1711  echo $(tput setaf 16)test$(tput setaf 7)
+ 1712  echo $(tput setaf 17)test$(tput setaf 7)
+ 1713  echo $(tput setaf 18)test$(tput setaf 7)
+ 1714  ls
+ 1715  touch colors.rb
+ 1716  vim colors.rb 
+ 1717  ruby --help
+ 1718  ruby --help |less
+ 1719  ruby colors.rb 
+ 1720  vim colors.rb 
+ 1721  vim colors.rb | echo
+ 1722  exit
+ 1723  ls .vimrc
+ 1724  ls
+ 1725  ls .vim
+ 1726  ls
+ 1727  ls ./.*
+ 1728  ls
+ 1729  ls -ld .??*
+ 1730  ls -l .??*
+ 1731  ls -d .??*
+ 1732  man ls
+ 1733  ls -d .*
+ 1734  ls -la .bashrc
+ 1735  vim .bashrc 
+ 1736  source .bashrc
+ 1737  vim .bashrc 
+ 1738  source .bashrc
+ 1739  test
+ 1740  source .bashrc
+ 1741  cd /data/
+ 1742  source .bashrc
+ 1743  cd ~
+ 1744  source .bashrc
+ 1745  grep test
+ 1746  ls
+ 1747  grep 10
+ 1748  grep 10 colors.rb 
+ 1749  grep 1 colors.rb 
+ 1750  source .bashrc
+ 1751  test
+ 1752  touch ~/server
+ 1753  source .bashrc
+ 1754  ls
+ 1755  ruby colors.rb | cat
+ 1756  c
+ 1757  mv ~/server ~/.server
+ 1758  source .bashrc
+ 1759  rm ~/.server 
+ 1760  source .bashrc
+ 1761  ls .config/
+ 1762  ls la .config/
+ 1763  ls -la .config/
+ 1764  vim .bashrc
+ 1765  vim ~/dev/notes/linuxnotes.txt 
+ 1766  ls
+ 1767  ls -d .??*
+ 1768  cd .config/
+ 1769  ls
+ 1770  ls -la
+ 1771  ls
+ 1772  cd .vim
+ 1773  ls
+ 1774  vm vimrc ../
+ 1775  mv vimrc ../
+ 1776  ls
+ 1777  cd ..
+ 1778  ls
+ 1779  rm .vimrc 
+ 1780  mv vimrc .vimrc
+ 1781  ls
+ 1782  ls -la
+ 1783  cd ..
+ 1784  ls
+ 1785  vim
+ 1786  ls
+ 1787  cd .config/
+ 1788  ls
+ 1789  ls -la
+ 1790  rm .export.sh.un~ 
+ 1791  ls -la
+ 1792  ls
+ 1793  cd ..
+ 1794  ls
+ 1795  exit
+ 1796  ls
+ 1797  ruby colors.rb | cat 
+ 1798  ruby colors.rb
+ 1799  ruby colors.rb | cat | awk '{print $1}'
+ 1800  ruby colors.rb | cat | awk '{print $1}' | cat
+ 1801  ruby colors.rb | cat
+ 1802  vim colors.rb 
+ 1803  ruby colors.rb | cat
+ 1804  vim colors.rb 
+ 1805  ruby colors.rb | cat
+ 1806  vim colors.rb 
+ 1807  ruby colors.rb | cat
+ 1808  vim colors.rb 
+ 1809  ruby colors.rb | cat
+ 1810  vim colors.rb 
+ 1811  ruby colors.rb | cat
+ 1812  vim colors.rb 
+ 1813  ruby colors.rb | cat
+ 1814  vim colors.rb 
+ 1815  ruby colors.rb | cat
+ 1816  vim colors.rb 
+ 1817  ruby colors.rb | cat
+ 1818  vim colors.rb 
+ 1819  ruby colors.rb | cat
+ 1820  vim colors.rb 
+ 1821  ruby colors.rb | cat
+ 1822  vim colors.rb 
+ 1823  ruby colors.rb | cat
+ 1824  vim colors.rb 
+ 1825  ruby colors.rb | cat
+ 1826  vim colors.rb 
+ 1827  ruby colors.rb | cat
+ 1828  ;q
+ 1829  vim colors.rb 
+ 1830  ;q
+ 1831  ruby colors.rb | cat
+ 1832  vim colors.rb 
+ 1833  ruby colors.rb | cat
+ 1834  vim colors.rb 
+ 1835  ruby colors.rb | cat
+ 1836  vim colors.rb 
+ 1837  ruby colors.rb | cat
+ 1838  vim colors.rb 
+ 1839  ruby colors.rb | cat
+ 1840  vim colors.rb 
+ 1841  ruby colors.rb | cat
+ 1842  vim colors.rb 
+ 1843  ruby colors.rb | cat
+ 1844  vim colors.rb 
+ 1845  ruby colors.rb | cat
+ 1846  vim colors.rb 
+ 1847  ruby colors.rb | cat
+ 1848  vim colors.rb 
+ 1849  ruby colors.rb | cat
+ 1850  vim colors.rb 
+ 1851  ruby colors.rb | less
+ 1852  ruby colors.rb | cat | less
+ 1853  ruby colors.rb | cat
+ 1854  vim colors.rb 
+ 1855  ruby colors.rb | cat
+ 1856  vim colors.rb 
+ 1857  ruby colors.rb | cat
+ 1858  vim colors.rb 
+ 1859  ruby colors.rb | cat
+ 1860  vim colors.rb 
+ 1861  ruby colors.rb | cat
+ 1862  vim .bashrc
+ 1863  source .bashrc
+ 1864  vim .bashrc
+ 1865  source .bashrc
+ 1866  vim .bashrc
+ 1867  ls -d ~/.*
+ 1868  ls -d /.*
+ 1869  ls
+ 1870  ls -d ./.*
+ 1871  ls -d ~/.*
+ 1872  ls -d .*
+ 1873  man ls | less
+ 1874  ls -dA .*
+ 1875  ls -d -A .*
+ 1876  ls -A -d .*
+ 1877  man ls | less
+ 1878  ls -A .*
+ 1879  ls -A
+ 1880  ls -Ad .*
+ 1881  ls -d -A .*
+ 1882  ls -d .*
+ 1883  ls -d .??*
+ 1884  mkdir .config
+ 1885  ls
+ 1886  mkdir .config
+ 1887  ls -d .??*
+ 1888  mv .bash_profile .config/
+ 1889  mv .bashrc .config/
+ 1890  mv .bin .config/
+ 1891  mv .git-completion.bash .config/
+ 1892  mv .gitconfig .config/
+ 1893  mv .tmux.conf .config/
+ 1894  ls .tmux/
+ 1895  mv .tmux/ .config/
+ 1896  ls -d .??*
+ 1897  cd .config/
+ 1898  ls
+ 1899  ls -la
+ 1900  vim export.sh
+ 1901  ls
+ 1902  ./export.sh
+ 1903  chmod a+x export.sh 
+ 1904  ./export.sh 
+ 1905  vim export.sh
+ 1906  ./export.sh 
+ 1907  vim export.sh
+ 1908  ./export.sh 
+ 1909  vim export.sh
+ 1910  ./export.sh 
+ 1911  vim export.sh
+ 1912  ./export.sh 
+ 1913  vim export.sh
+ 1914  ./export.sh 
+ 1915  vim export.sh
+ 1916  ./export.sh 
+ 1917  vim export.sh
+ 1918  ./export.sh 
+ 1919  vim export.sh
+ 1920  ./export.sh 
+ 1921  ls
+ 1922  ls -la
+ 1923  cd ..
+ 1924  ls -d .??*
+ 1925  vim .bashrc 
+ 1926  ls .bash
+ 1927  ls -la
+ 1928  ls -d .??*
+ 1929  vim .bashrc
+ 1930  cd .config/
+ 1931  ls
+ 1932  ls -la
+ 1933  cd ..
+ 1934  ls -la .??*
+ 1935  ls -lad .??*
+ 1936  vim .config/export.sh 
+ 1937  rm .bashrc 
+ 1938  cd .config/
+ 1939  ./export.sh 
+ 1940  cd ..
+ 1941  ls -la .bash
+ 1942  ls -la .bashrc
+ 1943  vim .config/export.sh 
+ 1944  ls
+ 1945  rm .bashrc 
+ 1946  cd .config/
+ 1947  ./export.sh 
+ 1948  cd ..
+ 1949  ls -la .bashrc 
+ 1950  vim .config/export.sh 
+ 1951  cd .config/
+ 1952  ls
+ 1953  ./export.sh 
+ 1954  cd ..
+ 1955  ls
+ 1956  ls -d .??*
+ 1957  vim .bashrc
+ 1958  rm .bashrc 
+ 1959  cd .config/
+ 1960  ./export.sh 
+ 1961  cd ..
+ 1962  ls
+ 1963  vim .bashrc 
+ 1964  vim
+ 1965  ls -la
+ 1966  ls
+ 1967  mv .vim .config/
+ 1968  mv .vimrc .config/
+ 1969  cd .config/
+ 1970  ./export.sh 
+ 1971  cd ..
+ 1972  ls
+ 1973  ls -la
+ 1974  vim
+ 1975  ls
+ 1976  cd .config/
+ 1977  ls
+ 1978  ls -la
+ 1979  vim export.sh 
+ 1980  ls .??*
+ 1981  ls -d .??*
+ 1982  cd ..
+ 1983  ls -d .??*
+ 1984  ls -la .??*
+ 1985  ls -lad .??*
+ 1986  vim .vimrc
+ 1987  cd .config/
+ 1988  ls
+ 1989  vim export.sh 
+ 1990  ls
+ 1991  ls -la
+ 1992  cd ..
+ 1993  ls
+ 1994  source .bashrc
+ 1995  vim dev/notes/linuxnotes.txt 
+ 1996  vim dev/notes/vimnotes.txt 
+ 1997  exit
+ 1998  tmux new -s dev
+ 1999  exit
+ 2000  ls
+ 2001  cd ..
+ 2002  ls
+ 2003  cd .config
+ 2004  ls
+ 2005  git init
+ 2006  ls
+ 2007  ls -la
+ 2008  rm -rf .git
+ 2009  cd ..
+ 2010  ls
+ 2011  cd .config/
+ 2012  ls
+ 2013  git init
+ 2014  ls
+ 2015  git commit -m "Initial setup of config repository"
+ 2016  man git
+ 2017  git --help
+ 2018  gls
+ 2019  ls
+ 2020  ls -la
+ 2021  git add .bash_profile
+ 2022  git add .*
+ 2023  git status
+ 2024  git add .??*
+ 2025  git status
+ 2026  ls
+ 2027  git add export.sh
+ 2028  git status
+ 2029* git remote add origin github.com/zendunni/config.git
+ 2030  git push origin/master
+ 2031  cd ~/.ssh
+ 2032  ssh-keygen -t rsa -C "kirk.werklund@gmail.com"
+ 2033  pbcopy < ~/.ssh/id_rsa.pub
+ 2034  cat ~/.ssh/id_rsa.pub
+ 2035  ssh -T git@github.com
+ 2036  git push origin/master git@github.com:zensunni/config.git  
+ 2037  git push origin/master git@github.com:zensunni/config 
+ 2038  cd ~/.config/
+ 2039  ls
+ 2040  git remote
+ 2041  git remote -v
+ 2042  git remote push
+ 2043  git remote push origin/master
+ 2044  git remote add origin git@github.com:zensunni/config.git
+ 2045  git remote remove oritin
+ 2046  git remote remove origin
+ 2047  git remote add origin git@github.com:zensunni/config.git
+ 2048  git push origin/master
+ 2049  git remote -v
+ 2050  git fetch
+ 2051  ls
+ 2052  ls -la
+ 2053  git branch -v
+ 2054  git branch
+ 2055  git branch -a
+ 2056  ls
+ 2057  git push
+ 2058  ls -la
+ 2059  checkout origin/master
+ 2060  git checkout origin/master
+ 2061  ls
+ 2062  ls -la
+ 2063  git status
+ 2064  git branch -a
+ 2065  git pull
+ 2066  ls
+ 2067  git add .??*
+ 2068  git status
+ 2069  git commit
+ 2070  git branches
+ 2071  git branch -a
+ 2072  git checkout remotes/origin/master
+ 2073  ls
+ 2074  ls -la
+ 2075  cd vim
+ 2076  ls
+ 2077  cd ..
+ 2078  ls
+ 2079  cd .git
+ 2080  ls
+ 2081  cd .config/
+ 2082  ls
+ 2083  cd .git
+ 2084  ls
+ 2085  cd branches/
+ 2086  ls
+ 2087  ls -la
+ 2088  cd ..
+ 2089  ls
+ 2090  git branches
+ 2091  git branch -a
+ 2092  git checkout (no branch)
+ 2093  ls
+ 2094  git merge
+ 2095  ls
+ 2096  ls -la
+ 2097  cd .git/
+ 2098  ls
+ 2099  cd branches/
+ 2100  ls
+ 2101  ls -a
+ 2102  cd ..
+ 2103  cd info/
+ 2104  ls
+ 2105  cd ..
+ 2106  cd objects/
+ 2107  ls
+ 2108  cd ..
+ 2109  ls
+ 2110  git branch -a
+ 2111  git reflog
+ 2112  git checkout master
+ 2113  ls
+ 2114  git branch -av
+ 2115  git checkout remotes/origin/master
+ 2116  ls
+ 2117  git checkout origin/master
+ 2118  ls
+ 2119  ls -la
+ 2120  git checkout remotes/origin/master
+ 2121  ls -la
+ 2122  cd .vim/
+ 2123  ls
+ 2124  cd bundle/
+ 2125  cd ..
+ 2126  ls -la
+ 2127  cd ..
+ 2128  ls
+ 2129  git branches -a
+ 2130  git branch -a
+ 2131  ls -a
+ 2132  git checkout master
+ 2133  la -a
+ 2134  git checkout remotes/origin/master
+ 2135  ls -a
+ 2136  git reflog
+ 2137  git checkout master 
+ 2138  git merge HEAD@{5}
+ 2139  ls
+ 2140  git log
+ 2141  git checkout -
+ 2142  ls -la
+ 2143  git checkout HEAD@{5}
+ 2144  ls
+ 2145  git reflog
+ 2146  git branches
+ 2147  git branch -v
+ 2148  git checkout HEAD b6400ba
+ 2149  git checkout HEAD@{b6400ba}
+ 2150  ls
+ 2151  ls -la
+ 2152  ls
+ 2153  cd ..
+ 2154  ls
+ 2155  cp .config/ .config_backup
+ 2156  cp -r .config/ .config_backup
+ 2157  ls
+ 2158  cd .config_backup/
+ 2159  ls
+ 2160  ls -a
+ 2161  cd ..
+ 2162  cd .config
+ 2163  ls
+ 2164  history | cat > history.txt
