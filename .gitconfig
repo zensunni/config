@@ -1,2 +1,21 @@
+[http]
+  sslVerify = false
+[user]
+  name = kwerklund
+  email = kwerklund@gettyimages.com
+[core]
+  editor = vim
+  autocrlf = false
+[merge]
+  tool = vimdiff
+[branch]
+  autosetuprebase = always
 [color]
-	ui = true
+  ui = true
+  status = auto
+  branch = auto
+  diff = auto
+  showbranch = auto
+[push]
+  default = matching
+

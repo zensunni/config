@@ -103,23 +103,43 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-#PATH=/usr/local/bin/:$PATH
+### My Stuff ###########################################################################
 
+# Set OS
+OS=`uname`
+if [ "$OS" == "windowsnt" ]; then
+    OS=windows
+elif [ "$OS" == "Darwin" ]; then
+    OS=mac
+else
+    OS=linux
+fi
+
+# OS specific alias'
+if [ "$OS" == "mac" ]; then
+  alias chrome="open /Applications/Google\ Chrome.app"
+fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# If "t" is installed
 if [ -f ~/dev/tasks/lib/t.py ]; then
   alias t='python ~/dev/tasks/lib/t.py --task-dir ~/dev/tasks --list work_todo.txt --delete-if-empty'
   alias c='python ~/dev/tasks/lib/t.py --task-dir ~/dev/tasks --list code_todo.txt --delete-if-empty'
   export PS1="[\[$(tput setaf 231)\]t\$(t | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]|\[$(tput setaf 231)\]c\$(c | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]]$PS1"
 fi
 
-PATH="~/.bin:$PATH"
+# Load .bin and bin into local paths
+PATH="~/bin:$PATH" # Local stuff
+PATH="~/.config/.bin:$PATH"
 
+# Set svn editor
 export SVN_EDITOR=vim
 
+# Add indicator in prompt, depending on .server file page
 if [ -f ~/.server ]; then
   export PS1="[\[$(tput setaf 1)\]server\[$(tput setaf 7)\]]$PS1"
 else
   export PS1="[\[$(tput setaf 6)\]local\[$(tput setaf 7)\]]$PS1"
 fi
 
-alias vim="/usr/local/bin/vim"
