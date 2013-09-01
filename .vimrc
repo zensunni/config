@@ -16,8 +16,10 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 "Copy-paste
-"set cb=unnamed
-
+"ctrl-x for cut
+vmap <C-x> :!pbcopy<cr>
+"ctrl-c for copy
+vmap <C-c> :w !pbcopy<cr><cr>
 
 "autopen NERDTree and focus cursor in new document <- not loading because of ease of use
 "autocmd VimEnter * NERDTree  
@@ -38,12 +40,15 @@ noremap td :tabclose<CR>
 "Show hidden files in NerdTree  
 "let NERDTreeShowHidden=1
 
+" mapping autocomplete to TODO
+"inoremap <tab><tab> <c-n>
+
 "Window Size, position, etc
 let NERDTreeWinSize=30
 let g:NERDTreeWinPos = "right"
 
 "Pasting (doesn't work) for some reason
-set pastetoggle=<C-p>
+set pastetoggle=<C-P>
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -78,8 +83,8 @@ set number
 if version >= 703
   set undofile
 endif
-set nobackup
-set noswapfile
+"set nobackup
+"set noswapfile
 
 let mapleader = ","
 nmap <silent> ,/ :nohlsearch<CR>
@@ -134,3 +139,8 @@ nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 
 inoremap jj <ESC>
 
+command! Cs :normal iconsole.log()<ESC>
+
+"Bubble text, used for moving a line of text up & down inside of vim"
+map <C-J> ddp
+map <C-K> ddkP

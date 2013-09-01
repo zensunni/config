@@ -49,15 +49,28 @@ shift $((OPTIND-1))
 
 ### Actual script ################################################
 
+if [ ! -f ./quickserver.rb ]; then
+  `echo "require 'sinatra'\n\nset :public_folder, './'\n\nget '/' do\n  redirect '/index.html'\nend" > quickserver.rb`
+fi
+
+
+# Check for gemfile and create it if it doesn't exist
 if [ ! -f ./Gemfile ]; then
   `echo "source 'https://rubygems.org'\n" > Gemfile`
 fi
 
-Shotgun=`grep shotgun Gemfile`
-if [ "$Shotgun" == "" ]; then
+# Check for shotgun & slim
+SHOTGUN=`grep shotgun Gemfile`
+SINATRA=`grep slim Gemfile`
+if [ "$SHOTGUN" == "" ]; then
   `echo "gem 'shotgun'" >> Gemfile`
 fi
 
-bundle exec shotgun -p $port
+if [ "$SINATRA" == "" ]; then
+  `echo "gem 'sinatra'" >> Gemfile`
+fi
+
+# Run the actual Command
+bundle exec shotgun -p $port quickserver.rb
 
 # Script by Kirk Werklund
