@@ -118,6 +118,11 @@ fi
 # OS specific alias'
 if [ "$OS" == "mac" ]; then
   alias chrome="open /Applications/Google\ Chrome.app"
+  PATH="~/.config/.bin:$PATH"
+fi
+
+if [ "$OS" == "linux" ]; then
+  PATH="~/config/.bin:$PATH"
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -131,7 +136,6 @@ fi
 
 # Load .bin and bin into local paths
 PATH="~/bin:$PATH" # Local stuff
-PATH="~/.config/.bin:$PATH"
 
 # Set svn editor
 export SVN_EDITOR=vim
