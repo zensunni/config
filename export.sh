@@ -1,5 +1,5 @@
 #!/bin/bash
-FILES=~/.config/.??*
+FILES=~/config/.??*
 for f in $FILES
 do
   echo "Processing $f file..."
