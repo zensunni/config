@@ -1,0 +1,12 @@
+
+#FILES=~/.config/.??*
+FILES=`echo .[_a-zA-Z]* | sed "s/\.git\ //g;s/\ [._a-zA-Z]*\.swp//g;s/\ [._a-zA-Z]*~//g"`
+
+for f in $FILES
+do
+  echo "Creating link to $f"
+  ln -sf ~/config/$f ../
+  #echo "ln -sf ~/config/$f ../"
+  # take action on each file. $f store current file name
+done
+
