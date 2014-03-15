@@ -1,8 +1,8 @@
 [http]
   sslVerify = false
 [user]
-  name = kwerklund
-  email = kwerklund@gettyimages.com
+  name = kirk
+  email = kirk.werklund@gmail.com
 [core]
   editor = vim
   autocrlf = false
@@ -17,5 +17,9 @@
   diff = auto
   showbranch = auto
 [push]
-  default = matching
-
+	default = simple
+[alias]
+  tree = log --graph --decorate --oneline --all --color
+[merge "ours"]
+  name = "Keep our file"
+  driver = true

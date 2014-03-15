@@ -37,6 +37,15 @@ noremap th :tabprev<CR>
 noremap tn :tabnew<CR>
 noremap td :tabclose<CR>
 
+"Ctrl-p
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"Markdown
+let g:vim_markdown_folding_disabled=1
+
+"Puppet
+filetype plugin indent on
+
 "Show hidden files in NerdTree  
 "let NERDTreeShowHidden=1
 
@@ -116,14 +125,16 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 nnoremap ; :
+nnoremap @ @:
+
 
 "au FocusLost * :wa
 
