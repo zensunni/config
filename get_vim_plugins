@@ -1,7 +1,10 @@
-cd .vim/bundle/
+rm -rf ~/config/.vim/bundle/*
+cd ~/config/.vim/bundle/
 
-#git clone https://github.com/mileszs/ack.vim.git
-#git clone https://github.com/kien/ctrlp.vim.git
+rm -rf ./*
+
+git clone https://github.com/mileszs/ack.vim.git
+git clone https://github.com/kien/ctrlp.vim.git
 git clone https://github.com/scrooloose/nerdcommenter.git
 git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kchmck/vim-coffee-script.git
