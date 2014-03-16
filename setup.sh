@@ -13,6 +13,7 @@ esac
 # Install software
 if [[ $OS == "LINUX" ]]; then
   sudo apt-get install tmux vim ack
+  # Remap home key
 elif [[ $OS == "OSX" ]]; then
   # install homebrew
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" 
