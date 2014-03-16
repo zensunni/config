@@ -155,3 +155,9 @@ command! Cs :normal iconsole.log()<ESC>
 "Bubble text, used for moving a line of text up & down inside of vim"
 map <C-J> ddp
 map <C-K> ddkP
+
+"Stop TMUX background from bleeding into VIM
+if &term =~ '256color'
+  set t_ut=
+endif
+"Source: http://sunaku.github.io/vim-256color-bce.html

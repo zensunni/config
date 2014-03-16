@@ -105,24 +105,26 @@ fi
 
 ### My Stuff ###########################################################################
 
-# Set OS
-OS=`uname`
-if [ "$OS" == "windowsnt" ]; then
-    OS=windows
-elif [ "$OS" == "Darwin" ]; then
-    OS=mac
-else
-    OS=linux
-fi
+# Detect the OS:
+case $OSTYPE in
+  solaris*) OS=SOLARIS;;
+  darwin*)  OS=OSX;; 
+  linux*)   OS=LINUX;; 
+  bsd*)     OS=BSD;; 
+  *)        OS="Unknown: $OSTYPE";; 
+esac
+# Source: http://f00bar.com/
 
-# OS specific alias'
-if [ "$OS" == "mac" ]; then
+
+# OSX configuration
+if [ "$OS" == "OSX" ]; then
+  # Quick app aliases: 
   alias chrome="open /Applications/Google\ Chrome.app"
-  PATH="~/.config/.bin:$PATH"
 fi
 
-if [ "$OS" == "linux" ]; then
-  PATH="~/config/.bin:$PATH"
+# Linux configuration:
+if [ "$OS" == "LINUX" ]; then
+  export TERM=xterm-256color
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
@@ -136,6 +138,7 @@ fi
 
 # Load .bin and bin into local paths
 PATH="~/bin:$PATH" # Local stuff
+PATH="~/config/.bin:$PATH"
 
 # Set svn editor
 export SVN_EDITOR=vim
