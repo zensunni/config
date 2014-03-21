@@ -15,11 +15,8 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 
-"Copy-paste
-"ctrl-x for cut
-vmap <C-x> :!pbcopy<cr>
-"ctrl-c for copy
-vmap <C-c> :w !pbcopy<cr><cr>
+"Copy to clipboard
+set clipboard=unnamed
 
 "autopen NERDTree and focus cursor in new document <- not loading because of ease of use
 "autocmd VimEnter * NERDTree  
