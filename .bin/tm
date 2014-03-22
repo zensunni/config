@@ -20,7 +20,8 @@ then
   tmux new-session -s dev -n Editor -d
 
   # issue vim command in first window
-  tmux send-keys -t dev:1 'vim' C-m
+  # Note: C-m is sending return key, which has to be done before and after typing in vim.
+  tmux send-keys -t dev:1 C-m "vim" C-m
 
  # we create more windows
   tmux new-window -n Terminal -t dev
