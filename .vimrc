@@ -55,7 +55,7 @@ map <C-l> <C-w>l
 
 "Plugin-specific settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim    "Ctrl-p
-"let g:vim_markdown_folding_disabled=1       "vim-markdown setting
+let g:vim_markdown_folding_disabled=1       "vim-markdown setting
 
 
 
