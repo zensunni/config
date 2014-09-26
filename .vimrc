@@ -130,12 +130,8 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 nnoremap ; :
-nnoremap @ @:
-
 
 "au FocusLost * :wa
-
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 nnoremap <leader>a :Ack
 
