@@ -1,0 +1,76 @@
+#!/bin/sh
+
+### Options setup ################################################
+
+show_help()
+{
+cat << EOF
+usage: $0 options
+
+This script creates a simple server using the shotgun gem. Requires ruby/gems.
+
+OPTIONS:
+   -h      Show this message
+   -p      Server root password
+TODO:
+  Create file input
+  Check for depancies
+EOF
+exit 0
+}
+
+OPTIND=1         # Reset in case getopts has been used previously in the shell.
+# Initialize our own variables:
+port=8000
+
+# Main options loop, plus help checker
+while getopts "h?p:" opt; do
+    case "$opt" in
+      h|\?)
+          show_help
+          ;;
+      p)  port=$OPTARG
+          ;;
+    esac
+done
+
+if [[ "$@" == "help" ]]; then
+  show_help
+fi
+
+# Remove arguments from leftovers
+shift $((OPTIND-1))
+
+# What's this for?
+[ "$1" = "--" ] && shift
+
+#echo "port=$port, Leftovers: $@"
+
+
+### Actual script ################################################
+
+if [ ! -f ./quickserver.rb ]; then
+  `echo "require 'sinatra'\n\nset :public_folder, './'\n\nget '/' do\n  redirect '/index.html'\nend" > quickserver.rb`
+fi
+
+
+# Check for gemfile and create it if it doesn't exist
+if [ ! -f ./Gemfile ]; then
+  `echo "source 'https://rubygems.org'\n" > Gemfile`
+fi
+
+# Check for shotgun & slim
+SHOTGUN=`grep shotgun Gemfile`
+SINATRA=`grep slim Gemfile`
+if [ "$SHOTGUN" == "" ]; then
+  `echo "gem 'shotgun'" >> Gemfile`
+fi
+
+if [ "$SINATRA" == "" ]; then
+  `echo "gem 'sinatra'" >> Gemfile`
+fi
+
+# Run the actual Command
+bundle exec shotgun -p $port quickserver.rb
+
+# Script by Kirk Werklund

@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# TODO:
+# Create options for creating different sessions:
+# -n      Specify a session name
+# -w      Specify how many windows
+# -e      Start with editor in first window
+
+# change directory:
+#tmux send-keys -t development 'cd ~/devproject' C-m
+# note: These commands are being sent to the session
+#       They need to have a carraige return appended (C-m)
+
+tmux has-session -t dev
+if [ $? != 0 ]
+then
+
+  # Start a new session called dev and create a window called Editor with the "-n" option
+  # The "-d" detaches the session so we can issue more commands in the console
+  tmux new-session -s dev -n Editor -d
+
+  # issue vim command in first window
+  # Note: C-m is sending return key, which has to be done before and after typing in vim.
+  tmux send-keys -t dev:1 C-m "vim" C-m
+
+ # we create more windows
+  tmux new-window -n Terminal -t dev
+  tmux new-window -n Server -t dev
+
+  # select window
+  tmux select-window -t dev:1
+
+  # set monitor activity on
+  #tmux set-window-option -t dev:2 monitor-activity on
+  #tmux set-window-option -t dev:3 monitor-activity on
+
+fi
+
+# attach session to start using it
+tmux attach -t dev

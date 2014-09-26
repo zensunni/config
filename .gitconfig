@@ -1,0 +1,25 @@
+[http]
+  sslVerify = false
+[user]
+  name = kirk
+  email = kirk.werklund@gmail.com
+[core]
+  editor = vim
+  autocrlf = false
+[merge]
+  tool = vimdiff
+[branch]
+  autosetuprebase = always
+[color]
+  ui = true
+  status = auto
+  branch = auto
+  diff = auto
+  showbranch = auto
+[push]
+	default = simple
+[alias]
+  tree = log --graph --decorate --oneline --all --color
+[merge "ours"]
+  name = "Keep our file"
+  driver = true
