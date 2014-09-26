@@ -1,0 +1,5 @@
+--pager=LESS=FSRX less -r
+--ignore-dir=log
+--ignore-dir=ZF/public/css
+--ignore-dir=capybara
+--ignore-dir=vendor
