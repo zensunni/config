@@ -1,4 +1,5 @@
-rm -rf ~/config/.vim/bundle/*
+rm -rf ~/config/.vim/bundle
+mkdir ~/config/.vim/bundle
 cd ~/config/.vim/bundle/
 
 git clone https://github.com/mileszs/ack.vim.git
