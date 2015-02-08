@@ -154,3 +154,4 @@ fi
 
 # My Alias'
 alias vwipe='find . -iname ".*.un~" -delete'
+alias notes='vim ~/notes'

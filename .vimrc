@@ -49,9 +49,11 @@ let g:NERDTreeWinPos = "right"              "NERDTree
 "Vim settings =========================================================
 
 "Map leader key
-let mapleader = " "
+let mapleader = "\<Space>"
 
-set pastetoggle=<leader>p   "Toggle the paste mode for insert
+"set pastetoggle=<leader>p   "Toggle the paste mode for insert
+"disabled due weird issue where leader timeout was persisting in insert mode
+
 set nocompatible            "Turn off compatibility with vi (it's the 21st century)
 set modelines=0             "Remove modelines for security reasons
 set timeoutlen=3000         "Increase <leader> time
@@ -112,11 +114,11 @@ map <C-K> ddkP
 
 nmap <silent> ,/ :nohlsearch<CR>
 
-"noremap / /\v
-"vnoremap / /\v
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
+"Easy indent/outdent
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+vnoremap <Tab> >
+vnoremap <S-Tab> <
 
 "set textwidth=79
 "set formatoptions=qrn1
