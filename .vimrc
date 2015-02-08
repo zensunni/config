@@ -39,26 +39,22 @@ endif
 
 "Plugin settings ======================================================
 
-"NerdTree
-"Open on Control-N - note: <ESC> escapes mode
-"inoremap <silent><C-N> <ESC>:NERDTreeTabsToggle<CR>
-"nnoremap <silent><C-N> <ESC>:NERDTreeTabsToggle<CR>
-"vnoremap <silent><C-N> <ESC>:NERDTreeTabsToggle<CR>
-"Window Size, position, etc
-
 "Plugin-specific settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim    "Ctrl-p
 let g:ctrlp_working_path_mode = 0           "Ctrl-p
-let g:vim_markdown_folding_disabled=1       "vim-markdown setting
+let g:vim_markdown_folding_disabled=1       "vim-markdown
 let NERDTreeWinSize=30                      "NERDTree
 let g:NERDTreeWinPos = "right"              "NERDTree
 
 "Vim settings =========================================================
 
+"Map leader key
+let mapleader = " "
+
+set pastetoggle=<leader>p   "Toggle the paste mode for insert
 set nocompatible            "Turn off compatibility with vi (it's the 21st century)
 set modelines=0             "Remove modelines for security reasons
 set timeoutlen=3000         "Increase <leader> time
-set pastetoggle=<leader>p   "Pasting with indents
 
 set tabstop=2               "Tab settings
 set shiftwidth=2      
@@ -95,6 +91,9 @@ endif
 
 "Key Mappings =========================================================
 
+"Plugin specific mappings
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
 "Tab management
 noremap tl :tabnext<CR>
 noremap th :tabprev<CR>
@@ -107,11 +106,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"Bubble text, used for moving a line of text up & down inside of vim"
+"Bubble text, used for moving a line of text up & down inside of vim
 map <C-J> ddp
 map <C-K> ddkP
 
-let mapleader = ","
 nmap <silent> ,/ :nohlsearch<CR>
 
 "noremap / /\v
