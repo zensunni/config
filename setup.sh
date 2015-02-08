@@ -17,8 +17,8 @@ if [[ $OS == "LINUX" ]]; then
   # `sudo apt-get install gnome-tweak-tool`
 elif [[ $OS == "OSX" ]]; then
   # install homebrew
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" 
-  brew install tmux vim
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install makedepend tmux reattach-to-user-namespace vim
 fi
 
 # Link files

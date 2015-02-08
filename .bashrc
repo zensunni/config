@@ -145,9 +145,12 @@ PATH="~/config/.bin:$PATH"
 export SVN_EDITOR=vim
 
 # Add indicator in prompt, depending on .server file page
-if [ -f ~/.server ]; then
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   export PS1="[\[$(tput setaf 1)\]server\[$(tput setaf 7)\]]$PS1"
 else
   export PS1="[\[$(tput setaf 6)\]local\[$(tput setaf 7)\]]$PS1"
 fi
+# Source: http://serverfault.com/questions/187712/how-to-determine-if-im-logged-in-via-ssh
 
+# My Alias'
+alias vwipe='find . -iname ".*.un~" -delete'
