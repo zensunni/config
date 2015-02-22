@@ -126,6 +126,7 @@ fi
 if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
   alias open="xdg-open"
+  alias ack='ack-grep'
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
