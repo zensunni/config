@@ -9,5 +9,6 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone https://github.com/kchmck/vim-coffee-script.git
 git clone https://github.com/plasticboy/vim-markdown.git
 git clone https://github.com/jistr/vim-nerdtree-tabs.git
+git clone https://github.com/fatih/vim-go.git
 
 cd ~/config
