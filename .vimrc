@@ -39,6 +39,12 @@ endif
 
 "Plugin settings ======================================================
 
+"NerdTree
+"Open on Control-N - note: <ESC> escapes mode
+inoremap <silent><C-T> <ESC>:NERDTreeTabsToggle<CR>
+nnoremap <silent><C-T> <ESC>:NERDTreeTabsToggle<CR>
+vnoremap <silent><C-T> <ESC>:NERDTreeTabsToggle<CR>
+
 "Plugin-specific settings
 set runtimepath^=~/.vim/bundle/ctrlp.vim    "Ctrl-p
 let g:ctrlp_working_path_mode = 0           "Ctrl-p
@@ -47,12 +53,6 @@ let NERDTreeWinSize=30                      "NERDTree
 let g:NERDTreeWinPos = "right"              "NERDTree
 
 "Vim settings =========================================================
-
-"Map leader key
-let mapleader = "\<Space>"
-
-"set pastetoggle=<leader>p   "Toggle the paste mode for insert
-"disabled due weird issue where leader timeout was persisting in insert mode
 
 set nocompatible            "Turn off compatibility with vi (it's the 21st century)
 set modelines=0             "Remove modelines for security reasons
@@ -93,14 +93,23 @@ endif
 
 "Key Mappings =========================================================
 
+"Map leader key
+let mapleader = "\<Space>"
+
+"Map Leader Mappings
+nnoremap <leader>a :Ack
+nnoremap <leader>ft Vatzf
+nnoremap <leader>v V`]
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+"Colin instead of shift
+nnoremap ; :
+
+"Quickly exit insert mode
+inoremap jj <ESC>
+
 "Plugin specific mappings
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
-
-"Tab management
-noremap tl :tabnext<CR>
-noremap th :tabprev<CR>
-noremap tn :tabnew<CR>
-noremap td :tabclose<CR>
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -108,11 +117,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"Bubble text, used for moving a line of text up & down inside of vim
-map <C-J> ddp
-map <C-K> ddkP
-
-nmap <silent> ,/ :nohlsearch<CR>
+"Tab management
+noremap tl :tabnext<CR>
+noremap th :tabprev<CR>
+noremap tn :tabnew<CR>
+noremap td :tabclose<CR>
 
 "Easy indent/outdent
 nnoremap <Tab> >>
@@ -120,32 +129,13 @@ nnoremap <S-Tab> <<
 vnoremap <Tab> >
 vnoremap <S-Tab> <
 
-"set textwidth=79
-"set formatoptions=qrn1
-"set colorcolumn=85
+"Yank current file (not sure if work in linux)
+nmap <C-f> :let @+ = expand("%")<cr>
 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-"nnoremap j gj
-"nnoremap k gk
+"???
+nmap <silent> ,/ :nohlsearch<CR>
+command! Cs :normal iconsole.log()<ESC>
 
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-
-nnoremap ; :
-
-"au FocusLost * :wa
-
-nnoremap <leader>a :Ack
-nnoremap <leader>ft Vatzf
-nnoremap <leader>v V`]
-nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
-inoremap jj <ESC>
-command! Cs :normal iconsole.log()<ESC>

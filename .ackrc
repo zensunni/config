@@ -1,5 +1,8 @@
 --pager=LESS=FSRX less -r
 --ignore-dir=log
---ignore-dir=ZF/public/css
 --ignore-dir=capybara
+--ignore-dir=tmp
 --ignore-dir=vendor
+--ignore-dir=vcr/cassettes
+--ignore-dir=vcr
+--ignore-dir=backups
