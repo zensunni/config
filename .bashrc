@@ -142,6 +142,8 @@ fi
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
   alias vi='nvim'
+  export VISUAL=nvim
+  export EDITOR="$VISUAL"
 fi
 
 # Load .bin and bin into local paths

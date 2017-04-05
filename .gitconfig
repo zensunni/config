@@ -4,7 +4,7 @@
   name = kirk
   email = kirk.werklund@gmail.com
 [core]
-  editor = vim
+  editor = nvim
   autocrlf = false
 [merge]
   tool = vimdiff
