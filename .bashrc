@@ -138,6 +138,12 @@ if [ -f ~/dev/tasks/lib/t.py ]; then
   export PS1="[\[$(tput setaf 231)\]t\$(t | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]|\[$(tput setaf 231)\]c\$(c | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]]$PS1"
 fi
 
+# If neovim is installed
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+  alias vi='nvim'
+fi
+
 # Load .bin and bin into local paths
 PATH="~/bin:$PATH" # Local stuff
 PATH="~/config/.bin:$PATH"

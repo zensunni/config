@@ -1,8 +1,23 @@
-"Pathogen loader:
-execute pathogen#infect()
+"vim-plug packages
+if has('nvim')
+  call plug#begin('~/.vim/bundle')
 
-"Allows plugins and indent files for syntax highlighting
-filetype plugin on "indent - Removes annoying vim-markdown indent. Add back if having indent problems
+  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'mileszs/ack.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'kchmck/vim-coffee-script'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rails'
+  Plug 'plasticboy/vim-markdown' "aparently needs: 'Plugin 'godlygeek/tabular'
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'fatih/vim-go'
+  Plug 'slim-template/vim-slim'
+
+  call plug#end()
+endif
 
 "OS-specific settings =================================================
 
@@ -20,6 +35,8 @@ if OS == "Linux"
 endif
 
 "Coloring settings ====================================================
+
+set termguicolors
 
 "Turn on colorscheme if rich colors
 if &t_Co >= 256 || has("gui_running")

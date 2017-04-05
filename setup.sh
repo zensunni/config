@@ -12,18 +12,14 @@ esac
 
 # Install software
 if [[ $OS == "LINUX" ]]; then
-  sudo apt-get install tmux vim ack terminator vlc
+  sudo apt-get install tmux nvim ack terminator vlc
   # Remap home key (currently, you must install  gnome-tweak-tool to do this in gui).
   # `sudo apt-get install gnome-tweak-tool`
 elif [[ $OS == "OSX" ]]; then
   # install homebrew
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew install makedepend tmux reattach-to-user-namespace vim
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install tmux reattach-to-user-namespace nvim
 fi
 
 # Link files
 sh link_files
-
-# Get vim plugins
-sh get_vim_plugins
-
