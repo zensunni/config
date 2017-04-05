@@ -120,6 +120,7 @@ esac
 if [ "$OS" == "OSX" ]; then
   # Quick app aliases: 
   alias chrome="open /Applications/Google\ Chrome.app"
+  alias cb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy" # cb = copy branch
 fi
 
 # Linux configuration:
@@ -127,6 +128,7 @@ if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
   alias open="xdg-open"
   alias ack='ack-grep'
+  alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
