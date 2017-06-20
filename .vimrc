@@ -66,6 +66,7 @@ vnoremap <silent><C-T> <ESC>:NERDTreeTabsToggle<CR>
 set runtimepath^=~/.vim/bundle/ctrlp.vim    "Ctrl-p
 let g:ctrlp_working_path_mode = 0           "Ctrl-p
 let g:vim_markdown_folding_disabled=1       "vim-markdown
+let g:vim_markdown_new_list_item_indent = 2 "vim-markdown
 let NERDTreeWinSize=30                      "NERDTree
 let g:NERDTreeWinPos = "right"              "NERDTree
 
