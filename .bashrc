@@ -126,6 +126,10 @@ fi
 # Linux configuration:
 if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
+
+  # map caps lock key
+  xmodmap ~/.Xmodmap
+
   alias open="xdg-open"
   alias ack='ack-grep'
   alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch

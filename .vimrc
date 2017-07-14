@@ -36,7 +36,9 @@ endif
 
 "Coloring settings ====================================================
 
-set termguicolors
+if has('nvim')
+  set termguicolors
+endif
 
 "Turn on colorscheme if rich colors
 if &t_Co >= 256 || has("gui_running")
