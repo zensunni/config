@@ -127,7 +127,7 @@ fi
 if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
 
-  # map caps lock key
+  # map caps lock key: https://wiki.archlinux.org/index.php/xmodmap
   xmodmap ~/.Xmodmap
 
   alias open="xdg-open"
