@@ -1,0 +1,14 @@
+#!/bin/bash
+
+printf "#!/bin/bash\n\nprintf 'Life is a tragedy for those who feel, and a comedy for those who think. - Horace Walpole\\\n'\n" > ~/config/.bin/unnamed_script
+chmod u+x ~/config/.bin/unnamed_script
+printf "New script created: ~/.bin/unnamed_script\n"
+
+read -p "Would you like to edit it? [y/n]: " ANSWER
+case "${ANSWER}" in
+  y* | Y* )
+    "${EDITOR:-vim}" ~/.bin/unnamed_script
+    ;;
+esac
+
+tput setaf 1; printf "Remember to rename your script before it gets overwritten!\n"

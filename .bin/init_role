@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mkdir -p meta; printf -- '---\n\ndependencies: []\n' > meta/main.yml
+mkdir -p tasks;  printf -- '---\n\n- name:\n  yum:\n    name:\n    state: latest\n' > meta/main.yml
