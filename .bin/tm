@@ -19,13 +19,18 @@ then
   # The "-d" detaches the session so we can issue more commands in the console
   tmux new-session -s dev -n Editor -d
 
+  # we create more windows
+  tmux new-window -n Terminal -t dev
+  tmux new-window -n Server -t dev
+  #tmux new-window -n IRC -t dev
+
   # issue vim command in first window
   # Note: C-m is sending return key, which has to be done before and after typing in vim.
   tmux send-keys -t dev:1 C-m "vim" C-m
 
- # we create more windows
-  tmux new-window -n Terminal -t dev
-  tmux new-window -n Server -t dev
+  # issue irc command in first window
+  # Note: C-m is sending return key, which has to be done before and after typing in vim.
+  #tmux send-keys -t dev:4 C-m "irssi" C-m
 
   # select window
   tmux select-window -t dev:1

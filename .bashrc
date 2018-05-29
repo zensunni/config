@@ -130,6 +130,7 @@ if [ "$OS" == "LINUX" ]; then
   alias open="xdg-open"
   alias ack='ack-grep'
   alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
+  #alias irssi='TERM=screen-256color irssi'
 fi
 
 # Load .bin and bin into local paths

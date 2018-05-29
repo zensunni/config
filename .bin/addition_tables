@@ -1,0 +1,49 @@
+#!/bin/bash
+
+number=10
+points=0
+
+parse_attributes() {
+while [[ $# > 0 ]] ; do
+  case "$1" in
+    -n|--number) 
+      number=${2}
+      shift
+      ;;
+  esac
+  shift
+done
+}
+parse_attributes "$@"
+
+if [ ! -f ~/.addition_high_score ]; then
+  echo "0" > ~/.addition_high_score
+  high_score=0
+else
+  high_score=$(cat ~/.addition_high_score)
+fi
+
+for i in $(seq 1 $number); do
+  rone=$(( $RANDOM % 7 + 3 )) # 3-9
+  rtwo=$(( $RANDOM % 7 + 3 )) # 3-9
+  answ=$(($rone + $rtwo))
+  echo "$rone + $rtwo"
+  read user_input
+
+  if [ "$user_input" == "$answ" ]; then
+    echo "Correct!"
+    points=$(($points + 10))
+  else
+    points=$(($points - 10))
+  fi
+done
+
+score=$(($points - $SECONDS))
+
+if [ $score -gt $high_score ]; then
+  high_score=$score
+  echo "$high_score" > ~/.addition_high_score
+  echo "You set a new high score of $high_score"
+fi
+
+echo "Your score is $score. The High score is $high_score"
