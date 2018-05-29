@@ -2,7 +2,7 @@
 --ignore-dir=log
 --ignore-dir=capybara
 --ignore-dir=tmp
---ignore-dir=vendor
+--ignore-dir=.idea
 --ignore-dir=vcr/cassettes
 --ignore-dir=vcr
 --ignore-dir=backups

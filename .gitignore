@@ -2,3 +2,5 @@
 .vim/bundle/*
 *.un~
 *.swp
+.DS_Store
+.vagrant

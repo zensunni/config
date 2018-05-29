@@ -83,10 +83,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -121,6 +117,7 @@ if [ "$OS" == "OSX" ]; then
   # Quick app aliases: 
   alias chrome="open /Applications/Google\ Chrome.app"
   alias cb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy" # cb = copy branch
+  alias ll="ls -la"
 fi
 
 # Linux configuration:
@@ -135,38 +132,11 @@ if [ "$OS" == "LINUX" ]; then
   alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
 fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# If "t" is installed
-if [ -f ~/dev/tasks/lib/t.py ]; then
-  alias t='python ~/dev/tasks/lib/t.py --task-dir ~/dev/tasks --list work_todo.txt --delete-if-empty'
-  alias c='python ~/dev/tasks/lib/t.py --task-dir ~/dev/tasks --list code_todo.txt --delete-if-empty'
-  export PS1="[\[$(tput setaf 231)\]t\$(t | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]|\[$(tput setaf 231)\]c\$(c | wc -l | sed -e's/ *//')\[$(tput setaf 7)\]]$PS1"
-fi
-
-# If neovim is installed
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-  alias vi='nvim'
-  export VISUAL=nvim
-  export EDITOR="$VISUAL"
-fi
-
 # Load .bin and bin into local paths
 PATH="~/bin:$PATH" # Local stuff
 PATH="~/config/.bin:$PATH"
 
-# Set svn editor
-export SVN_EDITOR=vim
-
-# Add indicator in prompt, depending on .server file page
-if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  export PS1="[\[$(tput setaf 1)\]server\[$(tput setaf 7)\]]$PS1"
-else
-  export PS1="[\[$(tput setaf 6)\]local\[$(tput setaf 7)\]]$PS1"
-fi
-# Source: http://serverfault.com/questions/187712/how-to-determine-if-im-logged-in-via-ssh
-
 # My Alias'
 alias vwipe='find . -iname ".*.un~" -delete'
 alias notes='vim ~/notes'
+alias vi='vim'

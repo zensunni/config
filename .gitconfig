@@ -20,6 +20,7 @@
 	default = simple
 [alias]
   tree = log --graph --decorate --oneline --all --color
+	co = checkout
 [merge "ours"]
   name = "Keep our file"
   driver = true
