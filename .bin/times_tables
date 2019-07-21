@@ -21,6 +21,7 @@ do
     echo "Correct!"
     points=$(($points + 10))
   else
+    echo "Actually, it's $answ!"
     points=$(($points - 10))
   fi
 done

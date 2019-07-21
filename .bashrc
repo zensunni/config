@@ -124,7 +124,6 @@ fi
 if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
   alias open="xdg-open"
-  alias ack='ack-grep'
   alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
   #alias irssi='TERM=screen-256color irssi'
 fi
@@ -137,3 +136,7 @@ PATH="~/config/.bin:$PATH"
 alias vwipe='find . -iname ".*.un~" -delete'
 alias notes='vim ~/notes'
 alias vi='vim'
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

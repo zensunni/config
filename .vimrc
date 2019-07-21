@@ -21,7 +21,7 @@ Plug 'plasticboy/vim-markdown' "aparently needs: 'Plugin 'godlygeek/tabular'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
-Plug '/usr/local/opt/fzf'
+Plug '~/.fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 
@@ -39,7 +39,8 @@ endif
 
 if OS == "Linux"
   "TODO Make this easier than CTRL+C
-  vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
+  set clipboard=unnamedplus
+  "vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR>
 endif
 
 "Coloring settings ====================================================
