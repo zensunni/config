@@ -12,8 +12,9 @@ esac
 
 # Install software
 if [[ $OS == "LINUX" ]]; then
-  sudo apt-get install tmux vim ack terminator curl xsel gnome-tweak-tool
-  # gnome-tweak-tool - currently, you must install gnome-tweak-tool to remap ctrl with caps lock
+  sudo apt-get install tmux vim ack terminator curl xsel gnome-tweak-tool vim-gui-common
+  # * gnome-tweak-tool - currently, you must install gnome-tweak-tool to remap ctrl with caps lock
+  # * vim-gui-common - This is needed so that `set clipboard=unnamedplus` will use system clipboard
 elif [[ $OS == "OSX" ]]; then
   # install homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
