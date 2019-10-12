@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Usage: sum_time 01:00:00 02:00:11
+# Time must be in HH:MM:SS format, but can be by the hour
+# All seconds are rounded down
+# sum_time 1 => 60 minutes
+# sum_time 1:01 => 61 minutes
+# sum_time 1:01:59 = > 61 minutes
+case $OSTYPE in
+  darwin*)  OS=OSX;; 
+  linux*)   OS=LINUX;; 
+esac
+
+EPOCH='jan 1 1970'
+sum=0
+
+for i in $@
+do
+  if [[ $OS == "LINUX" ]]; then
+    sum="$(date -u -d "$EPOCH $i" +%s) + $sum"
+  elif [[ $OS == "OSX" ]]; then
+    sum="$(date -j -u -f '%b %d %Y %T' "$EPOCH $i" +%s) + $sum"
+  fi
+done
+
+echo "($sum) / 60" | bc | sed 's/$/ minutes./'
