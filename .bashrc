@@ -126,6 +126,8 @@ if [ "$OS" == "LINUX" ]; then
   alias open="xdg-open"
   alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
   #alias irssi='TERM=screen-256color irssi'
+  alias pbcopy='xsel --clipboard --input'
+  alias pbpaste='xsel --clipboard --output'
 fi
 
 # Load .bin and bin into local paths
@@ -136,7 +138,5 @@ PATH="~/config/.bin:$PATH"
 alias vwipe='find . -iname ".*.un~" -delete'
 alias notes='vim ~/notes'
 alias vi='vim'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
