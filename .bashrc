@@ -128,6 +128,7 @@ if [ "$OS" == "LINUX" ]; then
   #alias irssi='TERM=screen-256color irssi'
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
+  [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 fi
 
 # Load .bin and bin into local paths
@@ -138,5 +139,3 @@ PATH="~/config/.bin:$PATH"
 alias vwipe='find . -iname ".*.un~" -delete'
 alias notes='vim ~/notes'
 alias vi='vim'
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

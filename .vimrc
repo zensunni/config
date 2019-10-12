@@ -22,6 +22,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'fatih/vim-go'
 Plug 'slim-template/vim-slim'
 Plug '~/.fzf'
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 
