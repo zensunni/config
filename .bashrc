@@ -124,7 +124,7 @@ fi
 if [ "$OS" == "LINUX" ]; then
   export TERM=xterm-256color
   alias open="xdg-open"
-  alias cb="echo \"You haven't specified the copy command\"" # cb = copy branch
+  alias cb="git branch | grep '^\*' | cut -d' ' -f2 | tr -d '\n' | xsel --clipboard --input" # cb = copy branch
   #alias irssi='TERM=screen-256color irssi'
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
@@ -142,8 +142,16 @@ fi
 # Load .bin and bin into local paths
 PATH="~/bin:$PATH" # Local stuff
 PATH="~/config/.bin:$PATH"
+# DO NOT COMMIT - temporary hack for python pip3
+PATH="${HOME}/.local/bin:$PATH"
+PATH="~/.local/bin/aws_completer:$PATH"
+complete -C '~/.local/bin/aws_completer' aws
 
 # My Alias'
 alias vwipe='find . -iname ".*.un~" -delete'
 alias notes='vim ~/notes'
 alias vi='vim'
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
