@@ -129,6 +129,14 @@ if [ "$OS" == "LINUX" ]; then
   alias pbcopy='xsel --clipboard --input'
   alias pbpaste='xsel --clipboard --output'
   [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+  notify () {
+    if [ -z "$1" ] || [ -z "$2" ]; then
+      echo "Usage: notify <time-in-seconds> <message>"
+    else
+      sleep "$1"; zenity --info --no-wrap --text="${*:2}" 2>/dev/null
+    fi
+  }
 fi
 
 # Load .bin and bin into local paths

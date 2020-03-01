@@ -16,7 +16,6 @@ TODO:
   Create file input
   Check for depancies
 EOF
-exit 0
 }
 
 OPTIND=1         # Reset in case getopts has been used previously in the shell.
@@ -36,6 +35,7 @@ done
 
 if [[ "$@" == "help" ]]; then
   show_help
+  exit 0
 fi
 
 # Remove arguments from leftovers
