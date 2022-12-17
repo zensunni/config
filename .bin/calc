@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "$2" == "-p" ]]; then
+  python -c "print(str(round($1, 2)))"
+else
+  python -c "print(str(round($1, 2)))" | tr -d '\n' | xsel --clipboard --input
+fi
