@@ -12,7 +12,7 @@ esac
 
 # Install software
 if [[ $OS == "LINUX" ]]; then
-  sudo apt-get install tmux vim ack curl xsel gnome-tweak-tool vim-gui-common
+  sudo apt-get install tmux vim ack curl xsel gnome-tweaks vim-gui-common
   # * gnome-tweak-tool - currently, you must install gnome-tweak-tool to remap ctrl with caps lock
   # * vim-gui-common - This is needed so that `set clipboard=unnamedplus` will use system clipboard
 elif [[ $OS == "OSX" ]]; then
