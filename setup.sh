@@ -12,9 +12,10 @@ esac
 
 # Install software
 if [[ $OS == "LINUX" ]]; then
+  # vim-gui-common is needed so that `set clipboard=unnamedplus` will use system clipboard
   sudo apt-get install tmux vim ack curl xsel gnome-tweaks vim-gui-common
-  # * gnome-tweak-tool - currently, you must install gnome-tweak-tool to remap ctrl with caps lock
-  # * vim-gui-common - This is needed so that `set clipboard=unnamedplus` will use system clipboard
+  # Use gnome-tweaks to remap ctrl with caps lock: Keyboard & mouse > Additional Layout Options button > Caps Lock behavior chevron
+  # Firefox Plugins: Lastpass, momentum dash, ublock origin, vimium?
 elif [[ $OS == "OSX" ]]; then
   # install homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
