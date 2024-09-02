@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ "$1" == "-p" ]]; then
+  xsel --clipboard --output | tr -d ' ' | sed '$ ! s/$/+/' | tr -d '\n' | xargs -I % python3 -c "print(str(round(%, 2)))"
+elif [[ "$1" == "-s" ]]; then
+  xsel --clipboard --output | tr -d ' ' | sed '$ ! s/$/+/' | tr -d '\n' | xargs -I % python3 -c "print(str(round(%, 2)))" | tr -d '\n' xsel --clipboard --input
+else
+  xsel --clipboard --output | tr -d ' ' | sed '$ ! s/$/+/' | tr -d '\n' | xargs -I % python3 -c "print(str(round(%, 2)))" | xsel --clipboard --input
+fi

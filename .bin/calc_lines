@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ "$1" == "-p" ]]; then
-  xsel --clipboard --output | xargs -I % python -c "print(str(round(%, 2)))"
+  xsel --clipboard --output | xargs -I % python3 -c "print(str(round(%, 2)))"
 else
-  xsel --clipboard --output | xargs -I % python -c "print(str(round(%, 2)))" | xsel --clipboard --input
+  xsel --clipboard --output | xargs -I % python3 -c "print(str(round(%, 2)))" | xsel --clipboard --input
 fi
 
